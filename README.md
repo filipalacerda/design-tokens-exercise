@@ -29,7 +29,7 @@ Given this,  I would split the tokens into categories:
             dark: "#CF6679"
         },
         error: {
-            ligth: "#DC3545",
+            light: "#DC3545",
             dark: "#CF6679"
         },
         info: {
@@ -37,15 +37,15 @@ Given this,  I would split the tokens into categories:
             dark: "#03A9F4",
         },
         success: {
-            ligth: "#28A745",
+            light: "#28A745",
             dark: "#81C784",
         },
         text: {
-            ligth: "#333333",
+            light: "#333333",
             dark: "#E0E0E0",
         },
         background: {
-            ligth: "#FFFFFF",
+            light: "#FFFFFF",
             dark: "#121212",
         }
     },
@@ -71,3 +71,30 @@ Given this,  I would split the tokens into categories:
 ```
 
 ### How would you implement a light and dark theme in the application using these design tokens? Describe your approach in detail.
+
+For light and dark themes, there's usually some shared values.
+For the shared values, I would create a `core` object. The would include values like `white`, brand colors.
+
+The colors should be optimized to be consistent across both modes, and they should meet the acessibility criteria.
+
+With this in mind, we'd have to define the variants for `dark` and `light` modes.
+```javascript
+{
+    core: {
+        white: "value",
+        brand: "value",
+    },
+    dark: {
+        primary: {
+            light: "value",
+            dark: "value"
+        }
+    },
+    light: {
+        primary: {
+            light: "value",
+            dark: "value"
+        }
+    }
+}
+```
