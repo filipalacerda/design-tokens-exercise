@@ -110,6 +110,11 @@ It's also possible to use variables in Figma that sync with the existing design 
 
 Code-wise, we'd have the design tokens in a JSON format. We would then have a transformer, like [Style Dictionary](https://amzn.github.io/style-dictionary/#/) that would generate outputs like CSS and synchronize with Figma variables. This way, we would have a single source of truth, that would work across different platforms and applications.
 
+However, I don't have experience working with Style Dictionary. 
+My previous experience while working on Design System teams, was mostly focused on creating reusable components, implementing designs specs from Figma, and creating design token's primitives using external libraries.
+
+I also have experience on creating accessible web components.
+
 ### If possible provide examples from your experience where you have implemented similar strategies where appropriate
 
 I had two experiences with Design Systems in the past:
@@ -117,13 +122,13 @@ I had two experiences with Design Systems in the past:
 1. At Zapier, I was on the Design Systems team for about 8 months. Our main focus was more on the JavaScript side than on defining tokens. - This job was already done when I joined.
 At Zapier, we had no dark and light mode to handle.
 
-With this team, I was focused on creating and maintaining reusable components.
-We owned a npm package with all the components that the entire company would use - around 2000 people. The teams using them were very different, from Marketing to Frontend Engineers.
+    With this team, I was focused on creating and maintaining reusable components.
+    We owned a npm package with all the components that the entire company would use - around 2000 people. The teams using them were very different, from Marketing to Frontend Engineers.
 
-We worked together with Designers to ensure we were implementing the correct design for each component, keeping in mind accessibility, unit tests, end-to-end tests, and responsive designs.
-The design specs were delivered to us through Figma and we would implement React components using emotion CSS for styling the components.
+    We worked together with Designers to ensure we were implementing the correct design for each component, keeping in mind accessibility, unit tests, end-to-end tests, and responsive designs.
+    The design specs were delivered to us through Figma and we would implement React components using emotion CSS for styling the components.
 
-While on this team, I lead the migration from Styleguidist to Storybook. This enabled us to have accessibility checks for each component.
+    While on this team, I lead the migration from Styleguidist to Storybook. This enabled us to have accessibility checks for each component.
 
 2. At Lively, I've worked together with the principal designer to ensure the code and the figma tokens were synchronized:
     1. When I joined the team, the primitives being used in the tokens were outdated with the new Figma tokens.
