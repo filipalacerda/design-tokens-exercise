@@ -106,6 +106,7 @@ There are a few tools and processes that can make the implementation of design t
 
 [Tokens Studio](https://tokens.studio/), a Figma plugin, allows the team to create, edit, and manage tokens and integrate them with code.
 
-It's also possible to use variables in Figma that sync with the existing design tokens with the Tokens Studio plugin.
+It's also possible to use variables in Figma that sync with the existing design tokens with the Tokens Studio plugin, but I believe this is a beta feature.
 
-Code-wise, we'd have the design tokens in a JSON format. We would then have a transformer, like a Style Dictionary that would generate outputs like CSS and synchronize with Figma variables. This way, we would have a single source of truth, that would work across different platforms and applications.
+Code-wise, we'd have the design tokens in a JSON format. We would then have a transformer, like [Style Dictionary](https://amzn.github.io/style-dictionary/#/) that would generate outputs like CSS and synchronize with Figma variables. This way, we would have a single source of truth, that would work across different platforms and applications.
+
