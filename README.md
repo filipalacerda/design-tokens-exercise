@@ -3,7 +3,7 @@
 ### Given the list of design tokens provided, describe how you would reconfigure these tokens to be efficiently consumed by a ReactJS web application. What format would you recommend these tokens be in? Explain your reasoning.
 
 Design tokens are vital for storing all the design decisions used within the design system. 
-These decisions cover a variety of elements that define the product and brand, like colors, typography, borders, animations, and measurements. 
+These decisions cover a variety of elements that define the product and brand, like colors, typography, borders, animations, shadows, opacity, and measurements. 
 
 The tokens provided in the JSON file look like primitive tokens, which are the most basic form of tokens. The goal of Primitive Tokens is to create a robust palette that resonates with the brand identity.
 
@@ -73,14 +73,15 @@ Given this,  I would split the tokens into categories:
 ### How would you implement a light and dark theme in the application using these design tokens? Describe your approach in detail.
 
 For light and dark themes, there's usually some shared values.
-For the shared values, I would create a `core` object. The would include values like `white`, brand colors.
+For the shared values, I would create a `global` theme. This would be the foundations theme. That would include values like `white`, brand colors.
 
 The colors should be optimized to be consistent across both modes, and they should meet the acessibility criteria.
 
-With this in mind, we'd have to define the variants for `dark` and `light` modes.
+Then, I would create a light and a dark theme, with different tokens sets.
+With this in mind, we'd have to define the primitives variants for `dark` and `light` modes.
 ```javascript
 {
-    core: {
+    global: {
         white: "value",
         brand: "value",
     },
@@ -98,3 +99,13 @@ With this in mind, we'd have to define the variants for `dark` and `light` modes
     }
 }
 ```
+
+### Are there any tools or processes you would introduce to manage design tokens and aid in the implementation of the light and dark themes? Describe how these tools would integrate with the current workflow.
+
+There are a few tools and processes that can make the implementation of design tokens easier.
+
+[Tokens Studio](https://tokens.studio/), a Figma plugin, allows the team to create, edit, and manage tokens and integrate them with code.
+
+It's also possible to use variables in Figma that sync with the existing design tokens with the Tokens Studio plugin.
+
+Code-wise, we'd have the design tokens in a JSON format. We would then have a transformer, like a Style Dictionary that would generate outputs like CSS and synchronize with Figma variables. This way, we would have a single source of truth, that would work across different platforms and applications.
