@@ -2,11 +2,16 @@
 
 ### Given the list of design tokens provided, describe how you would reconfigure these tokens to be efficiently consumed by a ReactJS web application. What format would you recommend these tokens be in? Explain your reasoning.
 
-Design tokens point to style values, like colors, fonts, and measurements. Usually, each token is named for how and where it's used.
+Design tokens are vital for storing all the design decisions used within the design system. 
+These decisions cover a variety of elements that define the product and brand, like colors, typography, borders, animations, and measurements. 
+
+The tokens provided in the JSON file look like primitive tokens, which are the most basic form of tokens. The goal of Primitive Tokens is to create a robust palette that resonates with the brand identity.
+
+Ideally, I would use a combination of primitives and semantic tokens. Semantic tokens carry meaning and imply how and where they should be applied. They typically reference only the primitive tokens but include guidance on how colors should be used in text, the types of text to use, etc., embedding both meaning and guidance within.
 
 Design tokens connect style choices that would otherwise lack a clear relationship.
 
-Because tokens enable a design system to have a single source of truth, and because they are reusable and purpose-driven, and they can define systems and contexts for use, I would split the tokens into categories:
+Given this,  I would split the tokens into categories:
 
 ```javascript
 {
@@ -64,3 +69,5 @@ Because tokens enable a design system to have a single source of truth, and beca
     }
 }
 ```
+
+### How would you implement a light and dark theme in the application using these design tokens? Describe your approach in detail.
